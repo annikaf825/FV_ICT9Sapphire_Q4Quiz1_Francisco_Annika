@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<title>BMI CALCULATOR</title>
+</head>
+<body>
+<style>
+h2{
+background-color: #BCCCDC;
+}
+
+body{
+     background-image:url('https://static.vecteezy.com/system/resources/previews/020/562/824/non_2x/modern-aesthetic-abstract-banner-background-vector.jpg');
+     background-repeat: no repeat;
+     background-size: cover;
+     background-attachment: fixed;
+} 
+
+div{
+padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+label{
+    color: #526D82;
+    font-family: Consolas;
+}
+
+ #BMI {
+            width: 200px;
+            height: 200px;
+        }
+
+</style>
+
+<center>
+<h1>BMI CALCULATOR</h1>
+
+<p><b>BMI (Body Mass Index)</b> Its a type of measuring that calculates your estimated body fat using your height and weight.</p>
+<img src="https://lirp.cdn-website.com/69c0b277/dms3rep/multi/opt/BMI+levels-640w.jpg" id="BMI">
+ <details ontoggle="message()">
+ 	<br>
+    <summary>Instructions</summary>`
+      <i id="Personalinfo"></i>
+      <p>Input your height in meters and weight in kilograms below ⬇</p>
+
+        </details>
+
+<br>
+
+<label>Weight (kg): <input id="weight" type="number"></label><br><br>
+  <label>Height (m): <input id="height" type="number"></label><br><br>
+  <button onclick="calculateBMI()">Calculate</button>
+  <p id="result"></p>
+
+<br>
+
+<script>
+	function calculateBMI(){
+		var weight = document.getElementById("weight").value;
+		var height = document.getElementById("height").value;
+		var bmi = weight / (height * height);
+		var result = "";
+	
+
+ if (bmi < 18.5) {
+
+        result = "Underweight";
+      } else if (bmi < 24.9) {
+        result = "Normal weight";
+      } else if (bmi < 29.9) {
+        result = "Overweight";
+      } else {
+        result = "Obese";
+      }
+
+       document.getElementById("result").innerText = "Your BMI is " + bmi.toFixed(2) + " (" + result + ")";
+    }
+
+</script>
+
+<a>Submitted by Annika Francisco, 9S.</a>
+<br>
+    </section></div>
+
+
+
+    <label>
+        <a href="index.html"><button>Refresh</button></a> <br> <a href="https://docs.google.com/document/d/1ho0uBPgyofHMJH97rKzQRmc5zQeMSh54IELUD9ka4xs/edit?usp=sharing" target="new" style="text-align: center; font-size: 30px;">References</a>
+
+    </label>
+
+</body>
+</html>
